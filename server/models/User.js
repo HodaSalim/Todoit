@@ -5,11 +5,6 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    validate: [validator.isAlpha, "Name can contain only letters (a-zA-Z)"],
-  },
-  username: {
-    type: String,
-    required: true,
     unique: true,
     validate: [
       validator.isAlphanumeric,
